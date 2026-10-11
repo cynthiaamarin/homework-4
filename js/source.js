@@ -23,8 +23,7 @@ localStorage.setItem("album_id_2", "454yeYs9PxTEwGmZf6OBpa"); // I Know I'm Funn
 localStorage.setItem("album_id_3", "0FDkRPm9cIRJ8qBkxj2Qny"); // Underdressed at the Symphony
 localStorage.setItem("album_id_4", "0pEHMpnX1jA44pzhW3n0JB"); // Faye Webster
 
-// Keep your access token out of this source file.
-// Set it in the browser's localStorage before loading the page.
+// *********************************************************************
 
 async function load() {
   const artistID = localStorage.getItem("artist_id");
@@ -55,7 +54,7 @@ async function load() {
       `https://api.spotify.com/v1/${endpoint}`,
       {
         headers: {
-          Authorization: `Bearer ${accessToken}`
+          Authorization: `Bearer ${accessToken}` // my access token does not work
         }
       }
     );
